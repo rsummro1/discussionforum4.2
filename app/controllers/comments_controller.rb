@@ -3,6 +3,9 @@ class CommentsController < ApplicationController
   
     # POST /comments
     # POST /comments.json
+    def index 
+      @links = Link.all 
+    end
   
   def create
     @link = Link.find(params[:link_id])
